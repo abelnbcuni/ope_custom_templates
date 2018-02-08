@@ -1,1 +1,6 @@
-name: ope_templates
+---
+  blobstore:
+    provider: local
+    options:
+      blobstore_path: /tmp/bosh-blobs
+  final_name: ope_templates
