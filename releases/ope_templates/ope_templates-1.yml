@@ -1,0 +1,9 @@
+name: ope_templates
+version: "1"
+commit_hash: c5bc579
+uncommitted_changes: false
+jobs:
+- name: ope-custom-templates
+  version: a86e224720ffc3b15bd9ec51a2dea3ee428df380
+  fingerprint: a86e224720ffc3b15bd9ec51a2dea3ee428df380
+  sha1: 36291f8f8715d755d3d527c886ddb62ec65cfcd6
