@@ -1,0 +1,11 @@
+---
+name: ope-custom-templates
+
+templates: 
+    email.html: email.html
+    vm_health_template.html: vm_health_template.html
+    vm_health_template.tmpl: vm_health_template.tmpl
+
+packages: []
+
+properties: {}
