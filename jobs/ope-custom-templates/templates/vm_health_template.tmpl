@@ -1,3 +1,4 @@
 {{ define "vm_health_subject.tmpl" }}
-[BOSH VM DOWN]
+[{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}]- 
+{{- .GroupLabels.SortedPairs.Names | join "/" }}
 {{ end }}
