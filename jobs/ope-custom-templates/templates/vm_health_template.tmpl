@@ -1,8 +1,3 @@
-{{ define "vm_health_subject.tmpl" }} {{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }} -
-{{- .GroupLabels.SortedPairs["alertname"] }} -
-{{- .GroupLabels.SortedPairs["environment"] }} -
-{{- .GroupLabels.SortedPairs["application_name"] }} -
-{{- .GroupLabels.SortedPairs["bosh_job_name"] }}/{{ .GroupLabels.SortedPairs["bosh_job_index"] }} -
-{{- .GroupLabels.SortedPairs["bosh_job_ip"] }} -
-{{- .GroupLabels.SortedPairs["severity"] | toUpper}}
+{{ define "vm_health_subject.tmpl" }} 
+[ {{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }} ] -
 {{ end }}
