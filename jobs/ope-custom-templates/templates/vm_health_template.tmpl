@@ -1,4 +1,5 @@
 {{ define "vm_health_subject.tmpl" }} 
-[ {{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }} ] -
-{{- .GroupLabels.SortedPairs.Values | join "-" }}
+[{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] -
+{{- .GroupLabels.alertname }} -
+{{- .GroupLabels.environment }} -
 {{ end }}
