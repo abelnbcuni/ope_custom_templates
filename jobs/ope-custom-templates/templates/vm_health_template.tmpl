@@ -1,9 +1,4 @@
 {{ define "vm_health_subject.tmpl" }} 
 [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] -
 {{- .GroupLabels.SortedPairs.alertname }} -
-{{- .Labels.SortedPairs.environment }} -
-{{- .Labels.SortedPairs.application_name }} -
-{{- .Labels.SortedPairs.bosh_job_name }}/{{ .Labels.SortedPairs.bosh_job_index }} -
-{{- .Labels.SortedPairs.bosh_job_ip }} -
-{{- .Labels.SortedPairs.severity | toUpper }}
 {{ end }}
