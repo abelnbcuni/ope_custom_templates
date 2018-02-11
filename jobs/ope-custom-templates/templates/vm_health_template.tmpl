@@ -1,4 +1,7 @@
 {{ define "vm_health_subject.tmpl" }} 
 [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] -
 {{- .GroupLabels.alertname }} -
+{{- .CommonLabels.environment }} -
+{{- .CommonLabels.service }} -
+{{- .CommonLabels.severity }} -
 {{ end }}
