@@ -1,6 +1,6 @@
 {{ define "vm_health_subject.tmpl" }} 
-[{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] -
-{{- .GroupLabels.alertname }},
+[{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}]-
+{{- .GroupLabels.alertname }},{{ if eq .GroupLabels.alertname "BOSH_System_VM_Down" }}{{- .CommonLabels.SortedPairs.bosh_job_ip }},{{- .CommonLabels.SortedPairs.bosh_job_name }}/{{ .GroupLabels.SortedPairs.bosh_job_index }},{{ end }}
 {{- .CommonLabels.environment }},
 {{- .CommonLabels.service }},
 {{- .CommonLabels.severity | toUpper }}
