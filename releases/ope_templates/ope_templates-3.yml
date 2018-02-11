@@ -1,0 +1,9 @@
+name: ope_templates
+version: "3"
+commit_hash: deab4cd
+uncommitted_changes: false
+jobs:
+- name: ope-custom-templates
+  version: 918979a4ec6b8e2345b3cad191a0c09935a8ce77
+  fingerprint: 918979a4ec6b8e2345b3cad191a0c09935a8ce77
+  sha1: bb8c98f664117720a20a2fc434c123c15edb2461
