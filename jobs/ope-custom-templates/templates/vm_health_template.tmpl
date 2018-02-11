@@ -2,7 +2,6 @@
 [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] -
 {{- .CommonLabels.SortedPairs.alertname }} -
 {{- .CommonLabels.SortedPairs.environment }} -
-{{- .CommonLabels.SortedPairs.application_name }} -
 {{- .CommonLabels.SortedPairs.bosh_job_name }}/{{ .GroupLabels.SortedPairs.bosh_job_index }} -
 {{- .CommonLabels.SortedPairs.bosh_job_ip }} -
 {{- .CommonLabels.SortedPairs.severity | toUpper}}
