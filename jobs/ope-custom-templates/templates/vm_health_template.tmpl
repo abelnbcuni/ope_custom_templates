@@ -4,5 +4,5 @@
 {{- .CommonLabels.SortedPairs.environment }} -
 {{- .CommonLabels.SortedPairs.bosh_job_name }}/{{ .GroupLabels.SortedPairs.bosh_job_index }} -
 {{- .CommonLabels.SortedPairs.bosh_job_ip }} -
-{{- .CommonLabels.SortedPairs.severity | toUpper}}
+{{- .CommonLabels.SortedPairs.severity }}
 {{ end }}
